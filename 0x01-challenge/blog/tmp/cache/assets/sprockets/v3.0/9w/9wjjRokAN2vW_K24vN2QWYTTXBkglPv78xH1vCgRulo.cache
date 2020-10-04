@@ -1,0 +1,14 @@
+I"(function() {
+  $(function() {
+    return $(document).on("change", "input[type~=checkbox]", function() {
+      var url;
+      url = $(this).data("url");
+      return $.ajax(url, {
+        dataType: "script",
+        method: "POST"
+      });
+    });
+  });
+
+}).call(this);
+:ET
